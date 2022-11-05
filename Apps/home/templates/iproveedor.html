@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Insertar</title>
+{% endblock %}
+
+{% block sears2 %}
+ <!-- Topbar Search -->
+ <form
+ class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+ <div class="input-group">
+     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+         aria-label="Search" aria-describedby="basic-addon2" name="nombre" value="{{request.GET.nombre}}">
+     <div class="input-group-append">
+         <button class="btn btn-primary" type="submit">
+             <i class="fas fa-search fa-sm"></i>
+         </button>
+     </div>
+ </div>
+</form>
+
+
+{% endblock %}
+
+
+{% block compra %}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h3 class="m-0 font-weight-bold text-primary">Proveedor</h3>
+    </div>
+<div class="card-body">
+    <div class="table-responsive">
+        <form method="post">
+            {% csrf_token %}
+            <h6>Nombre</h6> {{ form.nombre }}
+            <h6>Telefono</h6> {{ form.telefono }}
+            <h6>Direccion</h6> {{ form.direccion }}
+            <h6>Correo</h6> {{ form.correo }}
+            <br>
+            <br>
+            <input type="submit" name="Guardar">
+        </form>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+{% endblock %}
