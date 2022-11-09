@@ -43,7 +43,6 @@
     <th>Categoria</th>
     <th>Proveedor</th>
     <th>Editar</th>
-    <th>Eliminar</th>
 
         </tr>
     </thead>
@@ -57,7 +56,6 @@
     <th>Categoria</th>
     <th>Proveedor</th>
     <th>Editar</th>
-    <th>Eliminar</th>
     
         </tr>
     </tfoot>
@@ -74,7 +72,6 @@
  
 
     <td><a href="{% url 'home:editProducto' str.id %}">Editar</a></td>
-    <td><a href="{% url 'home:editProducto1' str.id %}">Eliminar</a></td>
     </tr>
     {% endfor %}
     {% else %}
